@@ -20,6 +20,12 @@ body {
     background: rgb(250, 250, 250);  
   }
 
+  .role-fonts {
+    font-style: italic;
+  }
+
+  /*margins for top, left, and right sides*/
+
 .margin-top {
     margin-top: auto;
 }
