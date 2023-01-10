@@ -26,11 +26,10 @@ body {
 
   /*margins for top, left, and right sides*/
 
-.margin-top {
-    margin-top: auto;
-}
 
-.margin-sides {
-margin-left: 75px;
-margin-right: 75px;
+.margin-boarder {
+    margin-top: auto;
+    margin-left: 85px;
+    margin-right: 85px;
+    padding: 100px;
 }
