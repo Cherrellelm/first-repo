@@ -2,26 +2,26 @@
 
 /*this section sets the font to calibri*/
 
-* {
-    font-family:'calibri', serif;
-}
-
 /*setting font colors and background*/
 
-h1, h4 {
-    color: rgb(31, 141, 187);
-}
 
-h5{
-    color: rgb(96, 99, 99);
-}
-
-body { 
+.bodycolor { 
     background: rgb(250, 250, 250);  
+  }
+
+  .blue-font {
+    color: #1f8dbb;
+    font-family:'calibri', serif;
+  }
+
+  .gray-font {
+    color: #606363;
+    font-family:'calibri', serif;
   }
 
   .role-fonts {
     font-style: italic;
+    font-family:'calibri', serif;
   }
 
 
@@ -35,4 +35,5 @@ body {
     padding-right:  150px;
     padding-left: 150px;
     padding-bottom: 50px;
+    box-sizing: border-box;
 }
