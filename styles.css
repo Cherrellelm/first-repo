@@ -24,6 +24,7 @@ body {
     font-style: italic;
   }
 
+
   /*margins for top, left, and right sides*/
 
 
@@ -31,5 +32,7 @@ body {
     margin-top: auto;
     margin-left: 85px;
     margin-right: 85px;
-    padding: 100px;
+    padding-right:  150px;
+    padding-left: 150px;
+    padding-bottom: 50px;
 }
