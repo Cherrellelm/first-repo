@@ -11,12 +11,13 @@
 
   .blue-font {
     color: #1f8dbb;
-    font-family:'calibri', serif;
+    
   }
 
   .gray-font {
     color: #606363;
     font-family:'calibri', serif;
+    /*font-size: 1vw;*/
   }
 
   .role-fonts {
