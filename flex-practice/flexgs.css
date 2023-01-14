@@ -4,11 +4,12 @@
     display: flex;
 }
 
-.item {
+.container > .item {
     border: 1px dotted #ffc0cb;
     background-color: #f0ffff;
     border-right: 1px solid #6495ed;
-    flex: 1;
+    width: 400px;
+    flex: initial;
 }
 
 .itemfont {
