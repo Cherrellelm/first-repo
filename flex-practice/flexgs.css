@@ -1,0 +1,13 @@
+.container {
+    border: 5px solid #ffcc5c;
+    height: 50px;
+    display: flex;
+}
+
+.item {
+    text-align: center;
+    border: 1px dotted #ffc0cb;
+    background-color: #f0ffff;
+    border-right: 1px solid #6495ed;
+    flex: 1;
+}
