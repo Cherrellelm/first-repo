@@ -4,6 +4,7 @@ let firstName;
 let customerWebsite
 let phoneNumber;
 const fName = 'Cherrelle';
+const lName = 'McCauley';
 
 intRate = 10;
 firstName = "Cherrelle";
@@ -16,3 +17,4 @@ console.log("firstName")
 
 const greeting = `Hello, ${fName}`;
 console.log(greeting)
+console.log(`Hello ${lName}, ${fName}!`)
