@@ -22,14 +22,10 @@ const greeting = `Hello, ${fName}`;
 console.log(greeting)
 console.log(`Hello ${lName}, ${fName}!`)
 
-//variables admin and name on lines 6-7
 
-name = 'John';
-admin = name;
 
-//alert(admin)
+//inject html into document. Can you used to take info from the data base and build bits of html and push
+document.getElementById('message').innerHTML = 'I love javascript';
 
-//exercise 3, naming variables
-let ourPlanet = 'Earth';
-let currentSiteVisitor = 'John';
+
 
