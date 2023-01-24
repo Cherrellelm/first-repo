@@ -1,4 +1,4 @@
-let capitalCity = 'Nairobi';
+let cityName = 'Nairobi';
 let countryName = 'Kenya'; 
 //let capitalCity2 = 'Ulaanbaatar';
 //let countryName2 = 'Mongolia';
@@ -22,8 +22,10 @@ let countryName = 'Kenya';
 
 //a faster way to do this is to use a function
 
-displayCapitals(capitalCity, countryName);
+displayCapitals(cityName, countryName); //calling the function, very important
 
-function displayCapitals(capitalCity, countryName) {
-    console.log(`${capitalCity} is the capital city of ${countryName}`);
+//use arrays to call multiple values for one variable, think can my function recieve this array?
+
+function displayCapitals(cityName, countryName) {
+    console.log(`${cityName} is the capital city of ${countryName}`);
 }
