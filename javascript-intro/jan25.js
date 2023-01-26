@@ -1,12 +1,27 @@
 //Movie Theatre Admittance
+/*
+let age;
+let isSupervised;
 
-let age = 12;
-let isSupervised = true;
+age = 14;
+isSupervised = true;
 
 if (age >= 15) {
-   console.log ('accepted into the movie');
-}else if (isSupervised = true) {
-    console.log ("come on in")
+   console.log (true);
+} else if (isSupervised) {
+    console.log (true);
 } else {
-    console.log ('wait a few more years');
+    console.log (false);
 } 
+*/
+
+//Drinks allowed?
+
+let age = 18;
+let onBreak = false;
+
+if (age >= 18 &&! onBreak) {
+   console.log (true);
+} else {
+    console.log (false);
+}
