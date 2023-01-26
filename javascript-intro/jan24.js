@@ -27,7 +27,7 @@ function convertFahrenheitToCelsius(lFahrenheit) {
 console.log('212 degrees F is ' + celsius + ' degrees C' )
 
 
-//The Farm Problem
+//The Farm Problem edabit
  
 let chickens = 2;
 let cows = 4;
@@ -38,7 +38,7 @@ totalLegs = animalLegs(chickens, cows, pigs)
 
 function animalLegs(animal1, animal2, animal3) {
      
- let totalLegs = (animal1 + animal2 + animal3);
+ let totalLegs = (animal1*2 + animal2*3 + animal3*5);
     
     return totalLegs;
 }
