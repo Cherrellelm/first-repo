@@ -16,15 +16,17 @@ num = isEvenOrOdd();
 
 Create a function which calculates the amount of fuel it needs, given the distance. */
 
-let distance = 5;
+let distance = 55;
 let fuel = distance * 10;
 
 function calculateFuel (n) {
-     if (distance > 0 && fuel >= 100) {
-		console.log (fuel);
-	} else if (fuel < 100) {
-		console.log (100);
-	}
+    if (distance > 0) {
+        if (fuel >= 100) {
+            console.log(fuel);
+        }else {
+            console.log(100);
+        }
+    }
 }
 
 calculateFuel(distance);
