@@ -20,3 +20,14 @@ console.log ('Your doggie is ' + (puppyAge * 7) + ' years old in dog years!')
 calculateDogAge(2);
 calculateDogAge(5);
 calculateDogAge(11);
+
+
+//The Lifetime Supply Calculator
+
+const maxAge = 105;
+
+function calculateSupply(age, amount) {
+    let supply = ((amount * 365) * age);
+    console.log ('You will need ' + supply + ' to last you until the ripe old age of ' + age + '.')
+}
+calculateSupply(75,3);
