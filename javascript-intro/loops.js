@@ -23,3 +23,12 @@ function rollDice(localCounter) {
 for (let loopCounter = 2; loopCounter <=100; loopCounter=loopCounter + 2) {
     console.log(loopCounter);
 }
+
+/* same as v
+
+for (let loopCounter = 1; loopCounter <=100; loopCounter++) {
+    if (loopCounter % 2 ==0) {
+        console.log(loopCounter);
+    }
+}
+*/
