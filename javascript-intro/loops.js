@@ -5,7 +5,7 @@
 //counter = counter + 1; you could also do counter++ instead and counter-- is the same as counter -1
 
 //step 1) initialize a counter, step 2) check the condition, step 3) increment/decrement)
-for (counter = 1; counter <= 100; counter++) {
+for (counter = 1; counter <= 10; counter++) {
 
 //Begin a loop
 
@@ -18,3 +18,8 @@ function rollDice(localCounter) {
     console.log(`I'm on roll number ${localCounter}!!! `);
 }
 
+//write a loop that displays even numbers between 1 and 100
+
+for (let loopCounter = 2; loopCounter <=100; loopCounter=loopCounter + 2) {
+    console.log(loopCounter);
+}
