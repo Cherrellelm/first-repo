@@ -22,19 +22,19 @@ for (let counter = 1; counter <=10; counter++) {
     }
 
     if (randomNumber == 2) {
-    countTwos = countTwos + 1;
+        countTwos = countTwos + 1;
     }
 
     if (randomNumber == 3) {
-    countThrees = countThrees + 1;
+        countThrees = countThrees + 1;
     }
 
     if (randomNumber == 4) {
-    countFours = countFours + 1;
+        countFours = countFours + 1;
     }
 
     if (randomNumber == 5) {
-    countFives = countFives + 1;
+        countFives = countFives + 1;
     }
 
     if (randomNumber == 6) {
