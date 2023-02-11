@@ -4,8 +4,8 @@
 let str1 = "javascript";
 
 for (i = 0; i <= str1.length; i++) {
-    if(i % 2==0) {
-        console.log(str1.replace(i, "Z"));
+    if(i % 2 == 0) {
+        console.log(str1.replace(str1, "Z"));
     } else {
         console.log(str1.charAt(i));
     }
