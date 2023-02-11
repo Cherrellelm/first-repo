@@ -3,6 +3,11 @@
 
 let str1 = "javascript";
 
-for (let i = 1; i <= 10; i++) {
-    console.log(i)
+for (i = 0; i <= str1.length; i++) {
+    if(i % 2==0) {
+        console.log(str1.replace(i, "Z"));
+    } else {
+        console.log(str1.charAt(i));
+    }
+    
 }
