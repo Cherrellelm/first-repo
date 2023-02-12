@@ -3,11 +3,11 @@
 
 let str1 = "javascript";
 
-for (countLetters = 0; countLetters <= str1.length; countLetters++) {
-    if(countLetters % 2 == 1) {
+for (counter = 0; counter <= str1.length; counter++) {
+    if(counter % 2 == 1) {
         console.log(str1.replace(str1, "Z"));
     } else {
-        console.log(str1.charAt(countLetters));
+        console.log(str1.charAt(counter));
     }
 }
 
@@ -15,7 +15,7 @@ for (countLetters = 0; countLetters <= str1.length; countLetters++) {
 
 let str2 = "don't know why";
 
-for ( identifyLetter = 0; identifyLetter <= str2.length; identifyLetter++) {
+for ( counter = 0; counter <= str2.length; counter++) {
     if(str2.match("y")){
         console.log("yes");
     }else {
@@ -27,8 +27,8 @@ for ( identifyLetter = 0; identifyLetter <= str2.length; identifyLetter++) {
 
 let n2 = 4;
 
-for (i = 1; i <= n2; i++) {
-    n2 = n2 * i
+for (counter = 1; counter <= n2; counter++) {
+    n2 = n2 * counter
         console.log (n2);
 }
 */
