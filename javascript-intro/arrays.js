@@ -10,8 +10,7 @@ for (counter = 0; counter < maxCount; counter++) {
     countries.pop();
 }
 
-
-/*array methods
+//array methods
 console.log(Array.isArray(fruits));
 // push() adds an element to an array and returns the length pop() removes the last elements and returns the removed element
 //shift() removes the first element and shifts all elements down on the index
@@ -40,4 +39,4 @@ for (let counter = 0; counter < countries.length; counter++) {
 
 console.log(fruits.toString());
 console.log(fruits.join(" :) ")); //- what you put in the () will go in between array elements
-*/
+
