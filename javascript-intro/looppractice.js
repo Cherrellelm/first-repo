@@ -3,11 +3,11 @@
 
 let str1 = "javascript";
 
-for (i = 0; i <= str1.length; i++) {
-    if(i % 2 == 0) {
+for (countLetters = 0; countLetters <= str1.length; countLetters++) {
+    if(countLetters % 2 == 1) {
         console.log(str1.replace(str1, "Z"));
     } else {
-        console.log(str1.charAt(i));
+        console.log(str1.charAt(countLetters));
     }
 }
 
@@ -15,10 +15,22 @@ for (i = 0; i <= str1.length; i++) {
 
 let str2 = "don't know why";
 
-for ( i = 0; i <= str2.length; i++) {
+for ( identifyLetter = 0; identifyLetter <= str2.length; identifyLetter++) {
     if(str2.match("y")){
-        console.log('yes');
+        console.log("yes");
     }else {
-        console.log('no');
+        console.log("no");
     }   
 }
+/*
+// Exercise 7 - Given a number n Calculate the factorial of the number
+
+let n2 = 4;
+
+for (i = 1; i <= n2; i++) {
+    n2 = n2 * i
+        console.log (n2);
+}
+*/
+
+//make the variables readable 
