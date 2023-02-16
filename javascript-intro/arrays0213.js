@@ -70,24 +70,15 @@ let capitals = [
     "Gitega"
 ];
 
-let inputCountry= "Burundi";
-capitals.inputCountry;
+let inputCountry = "AfaGhanistan";
+let inputCapital;
+
+let countryIndex = countries.indexOf(inputCountry);
+let capitalIndex = countryIndex;
 
     if (countries.includes(inputCountry)) {
-        console.log(`The capital of ${countries} is ${capitals}.`);
+        inputCountry.toLowerCase;
+        console.log(`The capital of ${inputCountry} is ${capitals[capitalIndex]}.`);
     } else {
         console.log(`Sorry!!! No such country exists.`);
     }
-
-
-//capitalsOfCountries(countries, capitals);
-
-/*function capitalsOfCountries (country, capital) {
-    if (country.includes(inputCountry)) {
-        console.log(`The capital of ${country} is ${capital}.`);
-    } else {
-        console.log(`Sorry!!! No such country exists.`);
-    }
-}
-
-capitalsOfCountries(countries, capitals);*/
