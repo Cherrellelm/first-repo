@@ -70,15 +70,33 @@ let capitals = [
     "Gitega"
 ];
 
-let inputCountry = "AfaGhanistan";
-let inputCapital;
+//my solution - can't adjust toUpperCase() because we are using the index
+let inputCountry = "Afghanistan";
+let isFound = false;
 
 let countryIndex = countries.indexOf(inputCountry);
 let capitalIndex = countryIndex;
 
-    if (countries.includes(inputCountry)) {
-        inputCountry.toLowerCase;
-        console.log(`The capital of ${inputCountry} is ${capitals[capitalIndex]}.`);
-    } else {
-        console.log(`Sorry!!! No such country exists.`);
+if (countries.includes(inputCountry)) {
+    console.log(`The capital of ${inputCountry} is ${capitals[capitalIndex]}.`);
+} else {
+    console.log(`Sorry!!! No such country exists.`);
+}
+// accomplish this with a while loop
+
+let counter = 0;
+
+while (counter < countries.length) {
+    if (inputCountry.toUpperCase() == countries[counter].toUpperCase()) {
+        console.log(`The capital of ${countries[counter]} is ${capitals[counter]}.`);
+        isFound = true;
+        break;
     }
+    counter++;
+}
+
+console.log(`I have been in this weird loop for ${counter}`);
+
+if (isFound == false) {
+ console.log(`Sorry!!! No such country exists.`);
+}
