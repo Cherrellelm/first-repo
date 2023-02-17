@@ -28,9 +28,13 @@ let menuPrices = [7, 7, 4, 4, 2, 1];
 let order = [2,0,0,1,1,2];
 let counter = 0;
 
+
 while (counter < menuItems.length) {
-    if (order[counter] == menuItems[counter]) {
-        console.log(`${order[counter]} X ${menuItems[counter]} = (${order[counter]} * ${menuPrices[counter]})`)
-    } 
+    if (order[counter] > 0) {
+        console.log(order[counter] + " X " + menuItems[counter] + " = " + (order[counter] * menuPrices[counter]));
+        let price = (order[counter] * menuPrices[counter]);
+    }
     counter++;
 }
+
+console.log("TOTAL = " + price );
