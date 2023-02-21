@@ -36,18 +36,6 @@ let tipAmount = 0;
 let totalWithTip = 0;
 let totalWithTax = 0;
 
-/*
-for (let outCounter = 1; outCounter <= 1; outCounter++) {
-    for (counter = 0; counter < menuItems.length; counter++) {
-        if (order[counter] > 0) {
-            result = (order[counter] * menuPrices[counter] );
-            console.log(order[counter] + " X " + menuItems[counter] + " = " + (order[counter] * menuPrices[counter]));
-        }
-    }
-    console.log("TOTAL = " + result);
-}
-*/
-
 while (counter < menuItems.length) {
     if (order[counter] > 0) {
         result = (order[counter] * menuPrices[counter]);
