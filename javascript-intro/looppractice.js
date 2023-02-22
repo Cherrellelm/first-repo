@@ -16,12 +16,13 @@ for (counter = 0; counter <= str1.length; counter++) {
 let str2 = "don't know why";
 
 for ( counter = 0; counter <= str2.length; counter++) {
-    if(str2.match("y")){
-        console.log("yes");
-    }else {
-        console.log("no");
-    }   
+
 }
+if(str2.match("y")){
+    console.log("yes");
+}else {
+    console.log("no");
+}   
 /*
 // Exercise 7 - Given a number n Calculate the factorial of the number
 
