@@ -19,13 +19,15 @@ King - 13
 Queen - 12
 Jack - 11
 */
+//create array of 52 and randomly assign 5 - 7 cards once delt the card should be unaivailable
+//spades, hearts, diamonds, clubs
 
 let deltCards;
 let playerDraw;
-
+let cardDeck []
 playerdraw = getRandomNumber (2,14);
 
-console.log(`You picked up a ${playerDraw}`);
+console.log(` You picked up a ${playerDraw}`);
 
 
 

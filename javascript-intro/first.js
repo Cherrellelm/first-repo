@@ -27,5 +27,11 @@ console.log(`Hello ${lName}, ${fName}!`)
 //inject html into document. Can you used to take info from the data base and build bits of html and push
 document.getElementById('message').innerHTML = 'I love javascript';
 
+let numberOne = 15;
+let numberTwo = 3;
 
+function addNumbers(num1, num2) {
+console.log(num1 * num2);
+}
 
+addNumbers(numberOne, numberTwo);

@@ -71,7 +71,7 @@ let capitals = [
 ];
 
 //my solution - can't adjust toUpperCase() because we are using the index
-let inputCountry = "Afghanistan";
+let inputCountry = "Belize";
 let isFound = false;
 
 let countryIndex = countries.indexOf(inputCountry);
