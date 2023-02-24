@@ -12,7 +12,7 @@ let playCount = 1;
 let continueGame = true; // flag
 
 // Set value for Human choice
-humanChoice = "paper";
+humanChoice = "scissors";
 
 humanChoice = humanChoice.toUpperCase();
 
