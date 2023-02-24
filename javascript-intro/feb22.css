@@ -18,4 +18,5 @@
 
 .home {
   flex: 2;
+  float: right;
 }

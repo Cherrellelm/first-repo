@@ -1,5 +1,5 @@
 let breakfastMenu = ["Grits", "Mac & Cheese", "Potatoes", "French Toast", "Coffee", "Orange Juice"];
-let breakfastPrices = [" $3", " $4", " $3", " $6", " $2", " $2"];
+let breakfastPrices = ["$3.00", "$4.00", "$3.00", "$6.00", "$2.00", "$2.00"];
 
 let breakfast = document.querySelector('#breakfast');
 
@@ -18,16 +18,15 @@ for (let counter = 0; counter < breakfastMenu.length; counter++) {
     let divName = "item" + divID;
     breakfastItems = document.createElement('div');
     breakfastItems.setAttribute('id','item' + divName);
-    breakfastItems.textContent = breakfastMenu[counter] + breakfastPrices[counter];
+    breakfastItems.textContent = breakfastMenu[counter];
     breakfast.appendChild(breakfastItems);
     breakfastItems.classList.add('item');
-}
-    /*breakfast.setAttribute('id','item' + divName);
-    breakfast.appendChild(prices);
-    prices = document.createElement('div');
+
+    prices = document.createElement('span');    
+    breakfastItems.appendChild(prices);
     prices.textContent = breakfastPrices[counter];
     prices.classList.add('home');
-}*/
+}
 
 //Don't repeat yourself ^
 /*
