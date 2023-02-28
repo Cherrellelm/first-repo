@@ -7,15 +7,16 @@
   <body>
     <p id="message"></p>
 
-    <div>
+   <!-- <div>
       <input type="text" />
-    </div>
+    </div>-->
     <div>
       <form>
         <div>
           <label for="customername">Customer Name</label>
           <input type="text" id="customername" name="Customer Name" />
         </div>
+        <hr>
         <p>Please select your beverage</p>
         <input type="radio" id="tea" name="beverage" value="Tea" />
         <label for="tea">tea</label>
@@ -50,17 +51,21 @@
         />
         <label for="hawaiidiscount">I am from Hawaii</label>
         <br />
+        <hr>
         <label for="deliverytype">Select one option</label>
         <select name="deliverytype" id="deliverytype">
           <option value="ubereats">Uber Eats</option>
           <option value="doordash">Doordash</option>
           <option value="curbside">Curbside Pickup</option>
         </select>
-      </form>
+      <hr>
       <div>
-        <button onclick="submitOrder()">Submit</button>
+        <input type="button" id="submitOrder" name="submitOrder" value="Place Order" onclick="getOrder()">
       </div>
     </div>
+    </form>
+<div></div>
+
     <script src="events.js" defer></script>
   </body>
 </html>
