@@ -43,8 +43,18 @@ console.log(greetings ("SPANISH", "Cherrelle"));
 console.log(greetings ("HAWAII", "Kat"));
 console.log(greetings ("HINDI", "JayW"));
 
-let meow = studentName2 => "Namaste " + studentName2;
+let meow = studentName => "Namaste " + studentName;
 
 console.log(meow("Cherrelle"));
 console.log(meow("Kat"));
 console.log(meow("JayW"));
+
+function isPositive(number) {
+    return number >= 0;
+}
+
+console.log(isPositive(-28));
+
+document.addEventListener('click', function() {
+    console.log("Click event fired");
+})
