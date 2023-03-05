@@ -55,6 +55,9 @@ function isPositive(number) {
 
 console.log(isPositive(-28));
 
+//anonymous function
 document.addEventListener('click', function() {
     console.log("Click event fired");
 })
+
+document.addEventListener('click', () => console.log("Click event fired"));

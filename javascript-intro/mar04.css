@@ -1,0 +1,20 @@
+.container {
+    background: lightblue;
+    padding: 16px;
+    border: 1px solid black;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* this selector selects all divs inside of .flex-container */
+.item {
+    background: lightblue;
+    border: 0px solid white;
+    height: 48px;
+    flex: 1;
+    padding: 4px;
+}
+
