@@ -8,6 +8,11 @@ btn.addEventListener('click', () => displayStateName());
 
 btn.addEventListener('mouseover', () => console.log("UFO is hovering over us!!!"));
 
+let stateOption = document.createElement("option");
+stateOption.text = "South Carolina";
+stateOption.value = "SC";
+stateName.appendChild(stateOption);
+
 function displayStateName() {
 
     if (!document.getElementById("outputMessage")) {
