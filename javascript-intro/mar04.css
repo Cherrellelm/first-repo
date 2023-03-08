@@ -12,9 +12,16 @@
 /* this selector selects all divs inside of .flex-container */
 .item {
     background: lightblue;
-    border: 0px solid white;
+    border: 1px solid white;
     height: 48px;
     flex: 1;
     padding: 4px;
 }
 
+.lineItem {
+    background: lightblue;
+}
+
+.addButton {
+    appearance: auto;
+}

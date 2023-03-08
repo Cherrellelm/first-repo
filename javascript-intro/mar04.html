@@ -2,24 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Few Examples</title>
+    <title>Restaurant Bill</title>
     <link rel="stylesheet" href="mar04.css" />
     <script src="mar04.js" defer></script>
   </head>
   <body>
     <div class="container">
       <div>
+        <h1>EATS</h1>
+        <h3>Order Check</h3>
+      </div>
+
+      <div class="item">
+        <label for="statename">Location: </label>
+        <select name="statename" id="statename"></select>
+      </div>
+      <div class="item">
+        <button id="addOrderBtn">Add to Order</button>
+        <button id="clearOrderBtn">Clear Order</button>
+      </div>
+      <div class="item" id="orders">
+        <div id="itemDiv0">
+          <label id="itemNumber0">1.</label>
+          <select id="itemDescription0">
+            <option value="C">Chicken Chili</option>
+            <option value="J">Jerk Tilipia</option>
+            <option value="P">Potatoes</option>
+          </select>
+          <label id="itemPrice0"> $4.00</label>
+          <select id="itemQuantity0">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <label id="itemCost0"> $12.00</label>
+        </div>
+      </div>
+      <div class="item">
         <label for="orderTotal">Order Total</label>
         <input type="text" id="orderTotal" name="orderTotal" />
       </div>
-      <div class="item">
-        <label for="statename">Select one option</label>
-        <select name="statename" id="statename">
-          <!--<option value="GA">Georgia</option>
-          <option value="TX">Texas</option>
-          <option value="NC">North Carolina</option>-->
-        </select>
-      </div>
+
       <div class="item">
         <button id="submitBtn">Submit</button>
       </div>
