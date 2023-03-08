@@ -107,6 +107,15 @@ function loadOrderItem() {
     let itemDivID = "itemDiv" + itemCount;
     itemDiv.setAttribute('id', itemDivID);
 
+
+    let itemLabel = document.createElement("label");
+    let itemLabelID = "itemNumber" + itemCount;
+    itemLabel.setAttribute('id', itemLabelID);
+    itemLabel.innerText = itemCount;
+
+    //Attach this "label" to the parent DIV
+    itemDiv.append(itemLabel);
+
     let itemSelect = document.createElement("select");
     let itemSelectID = "itemDescription" + itemCount;
     itemSelect.setAttribute('id', itemSelectID);
@@ -118,6 +127,9 @@ function loadOrderItem() {
         itemSelect.appendChild(itemOption);
     }
     itemDiv.append(itemSelect);
+
+    //<label id="itemPrice0">$4.00</label>
+
 
     let itemSelectQty = document.createElement("select");
     let itemSelectQtyID = "itemQuantity" + itemCount;
@@ -147,4 +159,14 @@ function loadOrderItem() {
     orderItem.appendChild(itemDiv);
 
     itemCount++;
+}
+
+
+function getPrice(menuCode) {
+    
+    for(counter=0; counter < menuCodes.length; counter++) {
+        if(menuCode == menuCodes[counter]) {
+            return menuPrices[counter];
+        }
+    }
 }
