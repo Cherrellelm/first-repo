@@ -120,6 +120,16 @@ function loadOrderItem() {
     let itemSelectID = "itemDescription" + itemCount;
     itemSelect.setAttribute('id', itemSelectID);
 
+    //<option value="" disabled selected hidden>Choose an item</option>
+
+    let itemOption = document.createElement("option");
+    itemOption.text = "Choose an Item";
+    itemOption.vlue = "";
+    itemOption.selected = true;
+    itemOption.disabled = true;
+    itemOption.hidden = true;
+    itemSelect.appendChild(itemOption);
+
     for(counter=0; counter < menuItems.length; counter++) {
         let itemOption = document.createElement("option");
         itemOption.text = menuItems[counter];
