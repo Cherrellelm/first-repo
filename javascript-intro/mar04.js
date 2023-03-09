@@ -151,6 +151,8 @@ function loadOrderItem() {
 
     let itemPrice = document.createElement("label");
     let itemPriceID = "itemPrice" + itemCount;
+
+
     itemPrice.setAttribute('id', itemPriceID);
     itemPrice.innerText = "$0.00";
     itemDiv.append(itemPrice);
@@ -167,6 +169,14 @@ function loadOrderItem() {
     }
     itemDiv.append(itemSelectQty);
 
+    let itemCost = document.createElement("label");
+    let itemCostID = "itemCost" + itemCount;
+    itemCost.setAttribute('id', itemCostID);
+    itemCost.innerText = 999;
+    itemDiv.append(itemCost);
+
+
+
     orderItem.appendChild(itemDiv);
 
     itemCount++;
@@ -181,7 +191,7 @@ function computeLineItem(itemID, menuCode) {
     //let itemDiv = document.querySelector("#"+itemID);
     let itemPriceID = "itemPrice" + itemNumber;
     let itemPrice = document.querySelector("#"+itemPriceID);
-    itemPrice.innerText = lineItemPrice;
+    itemPrice.innerText = "$" + lineItemPrice.toFixed(2);
    
 
 }
