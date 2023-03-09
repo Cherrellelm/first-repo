@@ -34,4 +34,15 @@ for (counter = 1; counter <= n2; counter++) {
 }
 */
 
-//make the variables readable 
+//repeat a string
+
+let str = "Hello";
+let n = str.repeat(3);
+
+function repeatStr (n, s) {
+
+       console.log(n);
+   
+  }
+  
+  repeatStr(n, str);
