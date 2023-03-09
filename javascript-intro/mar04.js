@@ -3,6 +3,8 @@ let menuItems = ["Chicken Chili","Jerk Tilapia","Black Beans","Sweet Potato","Ho
 let menuCodes = ["CC","JT","BB","SP","HB","SO"];
 let menuPrices = [7, 7, 4, 4, 2, 1];
 
+let lineItemPrice = 0;
+
 let arrStateName = [
     "Alabama", 
     "Florida",
@@ -49,6 +51,8 @@ submitBtn.addEventListener('click', () => displayTaxCalcuation());
 addOrderBtn.addEventListener('click', () => addToOrder());
 
 clearOrderBtn.addEventListener('click', () => clearOrder());
+
+
 
 function addToOrder() {
    console.log("In the addToOrder function");
@@ -124,10 +128,11 @@ function loadOrderItem() {
 
     let itemOption = document.createElement("option");
     itemOption.text = "Choose an Item";
-    itemOption.vlue = "";
+    itemOption.value = "";
     itemOption.selected = true;
     itemOption.disabled = true;
     itemOption.hidden = true;
+    
     itemSelect.appendChild(itemOption);
 
     for(counter=0; counter < menuItems.length; counter++) {
@@ -136,10 +141,19 @@ function loadOrderItem() {
         itemOption.value = menuCodes[counter];
         itemSelect.appendChild(itemOption);
     }
+  
+
+    itemSelect.addEventListener('change', () => computeLineItem(itemSelect.id, itemSelect.value));
+
     itemDiv.append(itemSelect);
 
     //<label id="itemPrice0">$4.00</label>
 
+    let itemPrice = document.createElement("label");
+    let itemPriceID = "itemPrice" + itemCount;
+    itemPrice.setAttribute('id', itemPriceID);
+    itemPrice.innerText = "$0.00";
+    itemDiv.append(itemPrice);
 
     let itemSelectQty = document.createElement("select");
     let itemSelectQtyID = "itemQuantity" + itemCount;
@@ -153,22 +167,23 @@ function loadOrderItem() {
     }
     itemDiv.append(itemSelectQty);
 
-    /* 
-    let itemAddBtn = document.createElement("button");
-    let itemBtnID = "addBtn" + itemCount;
-    itemAddBtn.setAttribute('id', itemBtnID);
-    itemAddBtn.setAttribute('class', "addButton");
-    itemAddBtn.innerHTML = "Add";
-    itemAddBtn.addEventListener('click', () => {
-        console.log(itemAddBtn.id);
-        loadOrderItem();
-    });
-    itemDiv.append(itemAddBtn);
-    */
-
     orderItem.appendChild(itemDiv);
 
     itemCount++;
+}
+
+function computeLineItem(itemID, menuCode) {
+
+    let itemNumber = itemID.substring(15);
+
+    console.log("In computeLineItem() >>" + itemID + ">>" + menuCode + ">>" + itemNumber);
+    lineItemPrice = getPrice(menuCode);
+    //let itemDiv = document.querySelector("#"+itemID);
+    let itemPriceID = "itemPrice" + itemNumber;
+    let itemPrice = document.querySelector("#"+itemPriceID);
+    itemPrice.innerText = lineItemPrice;
+   
+
 }
 
 
