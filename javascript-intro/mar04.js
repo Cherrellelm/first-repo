@@ -144,7 +144,6 @@ function loadOrderItem() {
   
 
     itemSelect.addEventListener('change', () => computeLineItem(itemSelect.id, itemSelect.value));
-
     itemDiv.append(itemSelect);
 
     //<label id="itemPrice0">$4.00</label>
@@ -167,14 +166,16 @@ function loadOrderItem() {
         itemQtyOption.value = counter;
         itemSelectQty.appendChild(itemQtyOption);
     }
+    itemSelectQty.addEventListener('change', () => computeLineItem(itemSelect.id, itemSelect.value));
     itemDiv.append(itemSelectQty);
+
+    let itemCostNumber = 0;
 
     let itemCost = document.createElement("label");
     let itemCostID = "itemCost" + itemCount;
     itemCost.setAttribute('id', itemCostID);
-    itemCost.innerText = 999;
+    itemCost.innerText = "$0.00";
     itemDiv.append(itemCost);
-
 
 
     orderItem.appendChild(itemDiv);
@@ -193,6 +194,12 @@ function computeLineItem(itemID, menuCode) {
     let itemPrice = document.querySelector("#"+itemPriceID);
     itemPrice.innerText = "$" + lineItemPrice.toFixed(2);
    
+    let itemSelectQty = document.querySelector("#itemQuantity"+itemNumber);
+    let lineItemCost = lineItemPrice * itemSelectQty.value;
+    
+    let itemCostID = "itemCost" + itemNumber;
+    let itemCost = document.querySelector("#"+itemCostID);
+    itemCost.innerText = "$" +lineItemCost.toFixed(2);
 
 }
 
