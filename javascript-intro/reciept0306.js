@@ -2,6 +2,7 @@
 let menuItems = ["Chicken Chili","Jerk Tilapia","Black Beans","Sweet Potato","Homemade Brownie","Soda"];
 let menuCodes = ["CC","JT","BB","SP","HB","SO"];
 let menuPrices = [7, 7, 4, 4, 2, 1];
+let arrOrderTotal = [];
 
 let lineItemPrice = 0;
 
@@ -142,7 +143,6 @@ function loadOrderItem() {
         itemSelect.appendChild(itemOption);
     }
   
-
     itemSelect.addEventListener('change', () => computeLineItem(itemSelect.id, itemSelect.value));
     itemDiv.append(itemSelect);
 
@@ -179,7 +179,8 @@ function loadOrderItem() {
 
 
     orderItem.appendChild(itemDiv);
-
+    
+    arrOrderTotal[itemCount -1] = 0;
     itemCount++;
 }
 
@@ -201,6 +202,10 @@ function computeLineItem(itemID, menuCode) {
     let itemCost = document.querySelector("#"+itemCostID);
     itemCost.innerText = "$" +lineItemCost.toFixed(2);
 
+        arrOrderTotal[itemNumber - 1] = lineItemCost;
+
+        let orderTotal = document.querySelector("#orderTotal");
+        orderTotal.value = computeOrderTotal();
 }
 
 
@@ -211,4 +216,14 @@ function getPrice(menuCode) {
             return menuPrices[counter];
         }
     }
+}
+
+function computeOrderTotal() {
+    let orderTotal = 0;
+
+    for (counter =0; counter < arrOrderTotal.length; counter++) {
+        orderTotal = orderTotal + arrOrderTotal[counter];
+    }
+    //return the sum
+    return orderTotal;
 }
