@@ -56,9 +56,14 @@ clearOrderBtn.addEventListener('click', () => clearOrder());
 
 let addToOrder = () => loadOrderItem();
 
-let clearOrder = () => cconsole.log("In the ClearOrder function");
-
-
+let clearOrder = () => {
+    console.log("In the ClearOrder function");
+    let parentDiv = document.querySelector("#orders");
+    while (parentDiv.firstChild) {
+        parentDiv.removeChild(parentDiv.firstChild);
+    }
+    itemCount = 1;
+}
 
 function displayTaxCalcuation() {
 
@@ -111,7 +116,7 @@ function loadOrderItem() {
     let itemLabel = document.createElement("label");
     let itemLabelID = "itemNumber" + itemCount;
     itemLabel.setAttribute('id', itemLabelID);
-    itemLabel.innerText = itemCount;
+    itemLabel.innerText = itemCount + ".";
     //Attach this "label" to the parent DIV
     itemDiv.append(itemLabel);
 
