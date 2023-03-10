@@ -34,7 +34,7 @@ let addOrderBtn = document.querySelector("#addOrderBtn");
 let clearOrderBtn = document.querySelector("#clearOrderBtn");
 
 let stateName = document.querySelector("#statename");
-let outputDiv = document.querySelector('#output');
+let outputDiv = document.querySelector("#output");
 let orderTotal = document.querySelector("#orderTotal");
 let orderItem = document.querySelector("#orders");
 
@@ -54,14 +54,10 @@ clearOrderBtn.addEventListener('click', () => clearOrder());
 
 
 
-function addToOrder() {
-   console.log("In the addToOrder function");
-   loadOrderItem();   
-}
+let addToOrder = () => loadOrderItem();
 
-function clearOrder () {
-    console.log("In the ClearOrder function");
-}
+let clearOrder = () => cconsole.log("In the ClearOrder function");
+
 
 
 function displayTaxCalcuation() {
@@ -81,7 +77,7 @@ function displayTaxCalcuation() {
     outputDiv.appendChild(outputLine);
 
 }
-
+ // loadStates displays <option value="AL">Alabama</option> in html
 function loadStates() {
 
     for(counter = 0; counter < arrStateName.length; counter++) {
@@ -116,7 +112,6 @@ function loadOrderItem() {
     let itemLabelID = "itemNumber" + itemCount;
     itemLabel.setAttribute('id', itemLabelID);
     itemLabel.innerText = itemCount;
-
     //Attach this "label" to the parent DIV
     itemDiv.append(itemLabel);
 
