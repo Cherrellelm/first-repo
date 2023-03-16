@@ -232,12 +232,21 @@ function computeOrderTotal() {
 
 
 function tipOptions() {
+
     for(counter = 0; counter < tipAmount.length; counter++) {
-        //let tipInputId = "tipSelect" + itemCount;
-        //let tipInput;
+
+        let tipBoxLabel = document.createElement("label");
+        /*tipLabelID ="tipLabel";
+        tipLabelID.setAttribute('id', tipLabelID);
+        tipSelect.appendChild(tipLabelID);*/
+        
         let tipBox = document.createElement("input");
-        tipBox.text = tipAmount[counter];
+        let tipSelectID = "tipSelect" + itemCount;
+        tipBox.setAttribute('id', tipSelectID)
+        tipBox.name = tipAmount[counter];
         tipBox.value = tipAbbr[counter];
+        tipBox.innerText = tipAmount[counter];
+        tipBox.setAttribute("type" , "checkbox");
        // tipBox = document.setAttribute("type", "checkbox");
         //tipInput.setAttribute('type', 'checkbox');
         //tipInput.setAttribute('id', tipInputId);
@@ -249,11 +258,16 @@ function tipOptions() {
  /* loadStates displays <option value="AL">Alabama</option> in html
  function loadStates() {
 
-    for(counter = 0; counter < arrStateName.length; counter++) {
-        let stateOption = document.createElement("option");
-        stateOption.text = arrStateName[counter];
-        stateOption.value = arrStateAbbr[counter];
-        stateName.appendChild(stateOption);
+  let itemLabel = document.createElement("label");
+    let itemLabelID = "itemNumber" + itemCount;
+    itemLabel.setAttribute('id', itemLabelID);
+    itemLabel.innerText = itemCount + ".";
+    //Attach this "label" to the parent DIV
+    itemDiv.append(itemLabel);
+
+    let itemSelect = document.createElement("select");
+    let itemSelectID = "itemDescription" + itemCount;
+    itemSelect.setAttribute('id', itemSelectID);
     }*/
 
     tipOptions();
