@@ -29,6 +29,7 @@ let arrStateAbbr = [
 ];
 
 let arrStateTax = [4, 6, 4, 4.75, 6, 7, 6.25, 8];
+let tipAmount = [25, 20,15];
 
 let submitBtn = document.querySelector("#submitBtn");
 let addOrderBtn = document.querySelector("#addOrderBtn");
@@ -38,7 +39,7 @@ let stateName = document.querySelector("#statename");
 let outputDiv = document.querySelector("#output");
 let orderTotal = document.querySelector("#orderTotal");
 let orderItem = document.querySelector("#orders");
-
+let tipSelect = document.querySelector("#tip");
 let outputLine;
 
 let itemCount = 1;
@@ -202,10 +203,10 @@ function computeLineItem(itemID, menuCode) {
     let itemCost = document.querySelector("#"+itemCostID);
     itemCost.innerText = "$" +lineItemCost.toFixed(2);
 
-        arrOrderTotal[itemNumber - 1] = lineItemCost;
+    arrOrderTotal[itemNumber - 1] = lineItemCost;
 
-        let orderTotal = document.querySelector("#orderTotal");
-        orderTotal.value = computeOrderTotal();
+    let orderTotal = document.querySelector("#orderTotal");
+    orderTotal.value = computeOrderTotal();
 }
 
 
@@ -227,3 +228,26 @@ function computeOrderTotal() {
     //return the sum
     return orderTotal;
 }
+
+function tipOptions() {
+    let tipInput = document.creatElement("INPUT");
+    let tipInputId = "tipSelect" + itemCount;
+    tipInput.text = tipAmount[counter];
+    tipInput.value = tipAmount[counter];
+    tipInput.setAttribute('type', 'checkbox');
+    tipInput.setAttribute('id', tipInputId);
+
+
+//<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+}
+ /* loadStates displays <option value="AL">Alabama</option> in html
+ function loadStates() {
+
+    for(counter = 0; counter < arrStateName.length; counter++) {
+        let stateOption = document.createElement("option");
+        stateOption.text = arrStateName[counter];
+        stateOption.value = arrStateAbbr[counter];
+        stateName.appendChild(stateOption);
+    }*/
+
+    tipOptions();

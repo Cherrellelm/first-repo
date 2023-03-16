@@ -25,3 +25,7 @@
 .addButton {
     appearance: auto;
 }
+
+.align-right {
+    text-align: right;
+}
