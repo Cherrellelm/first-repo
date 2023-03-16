@@ -235,9 +235,12 @@ function tipOptions() {
 
     for(counter = 0; counter < tipAmount.length; counter++) {
 
+         //<label for="tipSelect"> 15%</label>
         let tipText = document.createElement("label");
         tipText.innerText = tipAmount[counter] + "%";
         tipSelect.appendChild(tipText);
+
+         // <input id="tipSelect3" name="15" type="checkbox" value="15" />
 
         let tipBox = document.createElement("input");
         let tipSelectID = "tipSelect" + itemCount;
@@ -250,11 +253,18 @@ function tipOptions() {
         itemCount++;
 
     }
-    tipBox.addEventListener('change', () => computeLineItem(itemSelect.id, itemSelect.value));
 
-
-//<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
 }
+
+/*function getSelectItemThat(tipSelectID) {
+    for (let counter = 1; counter <= 3; counter++) {
+        document.getElementById(counter).checked = false;
+    }
+    document.getElementById(tipSelectID).checked = true;
+}
+
+getSelectItemThat();*/
+//tipBox.addEventListener('change', () => computeLineItem(itemSelect.id, itemSelect.value));
  /* loadStates displays <option value="AL">Alabama</option> in html
  function loadStates() {
 
