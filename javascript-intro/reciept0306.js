@@ -235,11 +235,6 @@ function tipOptions() {
 
     for(counter = 0; counter < tipAmount.length; counter++) {
 
-        let tipBoxLabel = document.createElement("label");
-        /*tipLabelID ="tipLabel";
-        tipLabelID.setAttribute('id', tipLabelID);
-        tipSelect.appendChild(tipLabelID);*/
-        
         let tipBox = document.createElement("input");
         let tipSelectID = "tipSelect" + itemCount;
         tipBox.setAttribute('id', tipSelectID)
@@ -247,10 +242,8 @@ function tipOptions() {
         tipBox.value = tipAbbr[counter];
         tipBox.innerText = tipAmount[counter];
         tipBox.setAttribute("type" , "checkbox");
-       // tipBox = document.setAttribute("type", "checkbox");
-        //tipInput.setAttribute('type', 'checkbox');
-        //tipInput.setAttribute('id', tipInputId);
         tipSelect.appendChild(tipBox);
+        itemCount++;
     }
 
 //<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
