@@ -235,6 +235,10 @@ function tipOptions() {
 
     for(counter = 0; counter < tipAmount.length; counter++) {
 
+        let tipText = document.createElement("label");
+        tipText.innerText = tipAmount[counter] + "%";
+        tipSelect.appendChild(tipText);
+
         let tipBox = document.createElement("input");
         let tipSelectID = "tipSelect" + itemCount;
         tipBox.setAttribute('id', tipSelectID)
@@ -244,7 +248,10 @@ function tipOptions() {
         tipBox.setAttribute("type" , "checkbox");
         tipSelect.appendChild(tipBox);
         itemCount++;
+
     }
+    tipBox.addEventListener('change', () => computeLineItem(itemSelect.id, itemSelect.value));
+
 
 //<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
 }
