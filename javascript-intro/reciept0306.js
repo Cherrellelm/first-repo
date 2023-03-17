@@ -31,6 +31,7 @@ let arrStateAbbr = [
 let arrStateTax = [4, 6, 4, 4.75, 6, 7, 6.25, 8];
 let tipAmount = [25, 20,15];
 let tipAbbr = ["25", "20", "15"];
+let tipPercent = [.25, .20, .15];
 
 let submitBtn = document.querySelector("#submitBtn");
 let addOrderBtn = document.querySelector("#addOrderBtn");
@@ -223,7 +224,7 @@ function getPrice(menuCode) {
 function computeOrderTotal() {
     let orderTotal = 0;
 
-    for (counter =0; counter < arrOrderTotal.length; counter++) {
+    for (counter = 0; counter < arrOrderTotal.length; counter++) {
         orderTotal = orderTotal + arrOrderTotal[counter];
     }
     //return the sum
@@ -253,8 +254,20 @@ function tipOptions() {
         itemCount++;
 
     }
-
+  
 }
+
+tipSelect .addEventListener('change', () => tipCalc());
+
+function tipCalc () {
+   /* for(counter = 0; counter < tipAmount.length; counter++) {
+        if (tipAmount == tipAmount[counter]) {
+
+        }
+    }*/
+    console.log("tipCalc works" + lineItemCost);
+}
+
 
 /*function getSelectItemThat(tipSelectID) {
     for (let counter = 1; counter <= 3; counter++) {
@@ -264,7 +277,6 @@ function tipOptions() {
 }
 
 getSelectItemThat();*/
-//tipBox.addEventListener('change', () => computeLineItem(itemSelect.id, itemSelect.value));
  /* loadStates displays <option value="AL">Alabama</option> in html
  function loadStates() {
 
