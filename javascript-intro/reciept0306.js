@@ -29,9 +29,6 @@ let arrStateAbbr = [
 ];
 
 let arrStateTax = [4, 6, 4, 4.75, 6, 7, 6.25, 8];
-let tipAmount = [25, 20,15];
-let tipAbbr = ["25", "20", "15"];
-let tipPercent = [.25, .20, .15];
 
 let submitBtn = document.querySelector("#submitBtn");
 let addOrderBtn = document.querySelector("#addOrderBtn");
@@ -232,64 +229,15 @@ function computeOrderTotal() {
 }
 
 
-function tipOptions() {
 
-    for(counter = 0; counter < tipAmount.length; counter++) {
-
-         //<label for="tipSelect"> 15%</label>
-        let tipText = document.createElement("label");
-        tipText.innerText = tipAmount[counter] + "%";
-        tipSelect.appendChild(tipText);
-
-         // <input id="tipSelect3" name="15" type="checkbox" value="15" />
-
-        let tipBox = document.createElement("input");
-        let tipSelectID = "tipSelect" + itemCount;
-        tipBox.setAttribute('id', tipSelectID)
-        tipBox.name = tipAmount[counter];
-        tipBox.value = tipAbbr[counter];
-        tipBox.innerText = tipAmount[counter];
-        tipBox.setAttribute("type" , "checkbox");
-        tipSelect.appendChild(tipBox);
-        itemCount++;
-
-    }
-  
-}
-
-tipSelect .addEventListener('change', () => tipCalc());
+tipSelect.addEventListener('change', () => tipCalc());
 
 function tipCalc () {
-   /* for(counter = 0; counter < tipAmount.length; counter++) {
-        if (tipAmount == tipAmount[counter]) {
-
-        }
-    }*/
-    console.log("tipCalc works" + lineItemCost);
+    if(value = "25") {
+    console.log("tipCalc works");
+}else {
+    console.log("nope");
+}
 }
 
-
-/*function getSelectItemThat(tipSelectID) {
-    for (let counter = 1; counter <= 3; counter++) {
-        document.getElementById(counter).checked = false;
-    }
-    document.getElementById(tipSelectID).checked = true;
-}
-
-getSelectItemThat();*/
- /* loadStates displays <option value="AL">Alabama</option> in html
- function loadStates() {
-
-  let itemLabel = document.createElement("label");
-    let itemLabelID = "itemNumber" + itemCount;
-    itemLabel.setAttribute('id', itemLabelID);
-    itemLabel.innerText = itemCount + ".";
-    //Attach this "label" to the parent DIV
-    itemDiv.append(itemLabel);
-
-    let itemSelect = document.createElement("select");
-    let itemSelectID = "itemDescription" + itemCount;
-    itemSelect.setAttribute('id', itemSelectID);
-    }*/
-
-    tipOptions();
+    tipCalc();
