@@ -40,10 +40,12 @@ let orderTotal = document.querySelector("#orderTotal");
 let orderItem = document.querySelector("#orders");
 let tipSelect = document.querySelector("#tipSelect");
 let outputLine;
+let totalBill = 0;
 
 let itemCount = 1;
 
 loadStates();
+tipCalc();
 
 
 
@@ -66,12 +68,11 @@ let clearOrder = () => {
     itemCount = 1;
 }
 
+
+
 function displayTaxCalcuation() {
 
-    let taxRate = getStateTaxRate(stateName.value);
-    let taxAmount = calcTax(Number(orderTotal.value), taxRate);
-    let totalBill = Number(orderTotal.value) + taxAmount;
-
+    totalBill = Number(orderTotal.value) + taxAmount;
     if (!document.getElementById("outputMessage")) {
         outputLine = document.createElement('p');
         outputLine.setAttribute('id', 'outputMessage');
@@ -232,20 +233,30 @@ function computeOrderTotal() {
 
 tipSelect.addEventListener('click', () => tipCalc());
 
+
 function tipCalc () {
+
     let tip25 = document.getElementById('tipSelect25');
     let tip20 = document.getElementById('tipSelect20');
     let tip15 = document.getElementById('tipSelect15');
+    let tipTotal = document.getElementById('tipTotal');
+    let orderTotal = document.getElementById('#orderTotal');
+    let totalBill = orderTotal.value;
+
+    let tipAmount = 0;
 
     if(tip25.checked) {
-        let totalWTip25 = (totalBill * .25) + totalBill;
-    console.log("tipCalc works " + totalWTip25);
+        tipAmount = totalBill + ( totalBill * 0.25);
     
-   }else if (tip20.checked) {
-
-   }else if(tip15.checked){
-
+   } else if (tip20.checked) {
+        tipAmount = totalBill + ( totalBill * 0.20);
+   } else if(tip15.checked){
+        tipAmount = totalBill + ( totalBill * 0.15);
    }
+   tipTotal.value = tipAmount;
+   console.log("tipCalc works " + tipAmount);
 }
 
-    tipCalc();
+
+    /// Where I'm stuck, need to get orderTotal, totalBill and taxAmount but they are inside of functions
+    // tax orderTotal * .25 +

@@ -39,25 +39,30 @@
           <label id="itemCost0"> $12.00</label>
         </div>-->
       </div>
-      <div class="item radioBtn" id="tipSelect">
-        <!--<label for="tipSelect"> 15%</label>
-          <input id="tipSelect3" name="15" type="checkbox" value="15" />
-        </label>-->
-        <form>
-          <input type="radio" id="tipSelect25" name="tip" value="25" />
-          <label for="25">25%</label><br />
-          <input type="radio" id="tipSelect20" name="tip" value="20" />
-          <label for="20">20%</label><br />
-          <input type="radio" id="tipSelect15" name="tip" value="15" />
-          <label for="15">15%</label><br />
-        </form>
-      </div>
       <div class="item">
         <label for="orderTotal">Order Total</label>
         <input
           type="text"
           id="orderTotal"
           name="orderTotal"
+          readonly
+          class="align-right"
+        />
+      </div>
+      <div class="item radioBtn" id="tipSelect">
+        <input type="radio" id="tipSelect25" name="tip" value="25" checked />
+        <label for="25">25%</label><br />
+        <input type="radio" id="tipSelect20" name="tip" value="20" />
+        <label for="20">20%</label><br />
+        <input type="radio" id="tipSelect15" name="tip" value="15" />
+        <label for="15">15%</label><br />
+      </div>
+      <div class="item">
+        <label for="tipTotal">Tip Total</label>
+        <input
+          type="text"
+          id="tipTotal"
+          name="tipTotal"
           readonly
           class="align-right"
         />
