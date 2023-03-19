@@ -230,14 +230,22 @@ function computeOrderTotal() {
 
 
 
-tipSelect.addEventListener('change', () => tipCalc());
+tipSelect.addEventListener('click', () => tipCalc());
 
 function tipCalc () {
-    if(value = "25") {
-    console.log("tipCalc works");
-}else {
-    console.log("nope");
-}
+    let tip25 = document.getElementById('tipSelect25');
+    let tip20 = document.getElementById('tipSelect20');
+    let tip15 = document.getElementById('tipSelect15');
+
+    if(tip25.checked) {
+        let totalWTip25 = (totalBill * .25) + totalBill;
+    console.log("tipCalc works " + totalWTip25);
+    
+   }else if (tip20.checked) {
+
+   }else if(tip15.checked){
+
+   }
 }
 
     tipCalc();
