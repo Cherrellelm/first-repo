@@ -70,11 +70,22 @@
       </div>
 
       <div class="item">
-        <label id="labelStateTax" for="stateTax">State Tax for</label>
+        <label id="labelStateTax" for="stateTax"></label>
         <input
           type="text"
           id="taxTotal"
           name="taxTotal"
+          readonly
+          class="align-right"
+        />
+      </div>
+
+      <div class="item">
+        <label for="billTotal">Total Bill</label>
+        <input
+          type="text"
+          id="billTotal"
+          name="billTotal"
           readonly
           class="align-right"
         />

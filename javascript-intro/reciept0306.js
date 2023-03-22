@@ -41,12 +41,15 @@ let orderItem = document.querySelector("#orders");
 let tipSelect = document.querySelector("#tipSelect");
 let outputLine;
 let gOrderTotal = 0;
-
+let gTaxAmount = 0;
+let gTipAmount = 0;
+let totalBill = 0;
 let itemCount = 1;
 
 loadStates();
 tipCalc();
 taxCalc();
+totalBillCalc();
 
 //submitBtn.addEventListener('click', () => displayTaxCalcuation());
 
@@ -224,6 +227,8 @@ function tipCalc () {
         tipAmount = totalBill * 0.15;
    }
    tipTotal.value = tipAmount.toFixed(2);
+   gTipAmount = tipAmount;
+   totalBillCalc();
 }
 
 function taxCalc() {
@@ -231,12 +236,16 @@ function taxCalc() {
     let stateTaxRate;
     let taxAmount;
     let taxTotal = document.getElementById('taxTotal');
-    
+    let stateTaxLabel = document.getElementById('labelStateTax');
+
+    stateTaxLabel.innerText = "State tax for (" + stateName.value +") :";
     stateTaxRate = getStateTaxRate(stateName.value);
 
     taxAmount = gOrderTotal * (stateTaxRate/ 100);
 
     taxTotal.value = taxAmount.toFixed(2);
+    gTaxAmount = taxAmount;
+    totalBillCalc();
 }
 
 function getStateTaxRate(stateAbbr) {
@@ -248,11 +257,13 @@ function getStateTaxRate(stateAbbr) {
     }
 }
 
-/*function junk() {
+function totalBillCalc() {
+    let billTotal = document.getElementById('billTotal');
+    let bAmount = gOrderTotal + gTipAmount + gTaxAmount;
+    billTotal.value = bAmount.toFixed(2);
+}
 
-    let taxTotal = document.getElementById('taxTotal');
-
-    gOrderTotal = Number(orderTotal.value) + taxAmount;
+function junk() {
     
     if (!document.getElementById("outputMessage")) {
         outputLine = document.createElement('p');
@@ -264,4 +275,4 @@ function getStateTaxRate(stateAbbr) {
 
     outputDiv.appendChild(outputLine);
 
-}*/
+}
