@@ -46,12 +46,17 @@ let itemCount = 1;
 
 loadStates();
 tipCalc();
+taxCalc();
 
-submitBtn.addEventListener('click', () => displayTaxCalcuation());
+//submitBtn.addEventListener('click', () => displayTaxCalcuation());
 
 addOrderBtn.addEventListener('click', () => addToOrder());
 
 clearOrderBtn.addEventListener('click', () => clearOrder());
+
+tipSelect.addEventListener('click', () => tipCalc());
+
+stateName.addEventListener('change', () => taxCalc());
 
 
 
@@ -66,22 +71,6 @@ let clearOrder = () => {
     itemCount = 1;
 }
 
-
-
-function displayTaxCalcuation() {
-
-    totalBill = Number(orderTotal.value) + taxAmount;
-    if (!document.getElementById("outputMessage")) {
-        outputLine = document.createElement('p');
-        outputLine.setAttribute('id', 'outputMessage');
-    }
-    
-    outputLine.textContent = "Thank you for choosing EATS in " + stateName.value + "." 
-                            + "Your bill is " + totalBill;
-
-    outputDiv.appendChild(outputLine);
-
-}
  // loadStates displays <option value="AL">Alabama</option> in html
 function loadStates() {
 
@@ -91,20 +80,6 @@ function loadStates() {
         stateOption.value = arrStateAbbr[counter];
         stateName.appendChild(stateOption);
     }
-
-}
-
-function getStateTaxRate(stateAbbr) {
-
-    for(counter = 0; counter < arrStateAbbr.length; counter++) {
-        if(stateAbbr == arrStateAbbr[counter]) {
-            return arrStateTax[counter];
-        }
-    }
-}
-
-function calcTax(amount, taxRate) {
-    return ((amount * taxRate) / 100);
 }
 
 function loadOrderItem() {
@@ -208,8 +183,8 @@ function computeLineItem(itemID, menuCode) {
     orderTotal.value = gOrderTotal.toFixed(2);
 
     tipCalc();
+    taxCalc();
 }
-
 
 function getPrice(menuCode) {
     
@@ -229,11 +204,6 @@ function computeOrderTotal() {
     //return the sum
     return orderTotal;
 }
-
-
-
-tipSelect.addEventListener('click', () => tipCalc());
-
 
 function tipCalc () {
 
@@ -255,3 +225,43 @@ function tipCalc () {
    }
    tipTotal.value = tipAmount.toFixed(2);
 }
+
+function taxCalc() {
+
+    let stateTaxRate;
+    let taxAmount;
+    let taxTotal = document.getElementById('taxTotal');
+    
+    stateTaxRate = getStateTaxRate(stateName.value);
+
+    taxAmount = gOrderTotal * (stateTaxRate/ 100);
+
+    taxTotal.value = taxAmount.toFixed(2);
+}
+
+function getStateTaxRate(stateAbbr) {
+
+    for(counter = 0; counter < arrStateAbbr.length; counter++) {
+        if(stateAbbr == arrStateAbbr[counter]) {
+            return arrStateTax[counter];
+        }
+    }
+}
+
+/*function junk() {
+
+    let taxTotal = document.getElementById('taxTotal');
+
+    gOrderTotal = Number(orderTotal.value) + taxAmount;
+    
+    if (!document.getElementById("outputMessage")) {
+        outputLine = document.createElement('p');
+        outputLine.setAttribute('id', 'outputMessage');
+    }
+    
+    outputLine.textContent = "Thank you for choosing EATS in " + stateName.value + "." 
+                            + "Your bill is " + totalBill;
+
+    outputDiv.appendChild(outputLine);
+
+}*/

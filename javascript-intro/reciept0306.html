@@ -57,6 +57,7 @@
         <input type="radio" id="tipSelect15" name="tip" value="15" />
         <label for="15">15%</label><br />
       </div>
+
       <div class="item">
         <label for="tipTotal">Tip Total</label>
         <input
@@ -67,6 +68,18 @@
           class="align-right"
         />
       </div>
+
+      <div class="item">
+        <label id="labelStateTax" for="stateTax">State Tax for</label>
+        <input
+          type="text"
+          id="taxTotal"
+          name="taxTotal"
+          readonly
+          class="align-right"
+        />
+      </div>
+
       <div class="item">
         <button id="submitBtn">Submit</button>
       </div>
