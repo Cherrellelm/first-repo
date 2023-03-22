@@ -40,14 +40,12 @@ let orderTotal = document.querySelector("#orderTotal");
 let orderItem = document.querySelector("#orders");
 let tipSelect = document.querySelector("#tipSelect");
 let outputLine;
-let totalBill = 0;
+let gOrderTotal = 0;
 
 let itemCount = 1;
 
 loadStates();
 tipCalc();
-
-
 
 submitBtn.addEventListener('click', () => displayTaxCalcuation());
 
@@ -206,7 +204,10 @@ function computeLineItem(itemID, menuCode) {
     arrOrderTotal[itemNumber - 1] = lineItemCost;
 
     let orderTotal = document.querySelector("#orderTotal");
-    orderTotal.value = computeOrderTotal();
+    gOrderTotal = computeOrderTotal();
+    orderTotal.value = gOrderTotal.toFixed(2);
+
+    tipCalc();
 }
 
 
@@ -240,23 +241,17 @@ function tipCalc () {
     let tip20 = document.getElementById('tipSelect20');
     let tip15 = document.getElementById('tipSelect15');
     let tipTotal = document.getElementById('tipTotal');
-    let orderTotal = document.getElementById('#orderTotal');
-    let totalBill = orderTotal.value;
+    let totalBill = gOrderTotal;
 
     let tipAmount = 0;
 
     if(tip25.checked) {
-        tipAmount = totalBill + ( totalBill * 0.25);
+        tipAmount = totalBill * 0.25;
     
    } else if (tip20.checked) {
-        tipAmount = totalBill + ( totalBill * 0.20);
+        tipAmount = totalBill * 0.20;
    } else if(tip15.checked){
-        tipAmount = totalBill + ( totalBill * 0.15);
+        tipAmount = totalBill * 0.15;
    }
-   tipTotal.value = tipAmount;
-   console.log("tipCalc works " + tipAmount);
+   tipTotal.value = tipAmount.toFixed(2);
 }
-
-
-    /// Where I'm stuck, need to get orderTotal, totalBill and taxAmount but they are inside of functions
-    // tax orderTotal * .25 +
