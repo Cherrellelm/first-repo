@@ -4,7 +4,10 @@ function addMenuItem(code, item, price, isAvailable, isLocallySourced) {
         item,
         price,
         isAvailable,
-        isLocallySourced
+        isLocallySourced,
+        prepare() {
+            console.log("Your delicious " + this.item + " will be ready shortly"); 
+        }
     };
 }
 // v numbers must be in "", they are converted into strings if  you add + in front "+44"
@@ -15,8 +18,9 @@ let countryCodes = {
 }
 // you could delete the first key in code: code, for example and it will function the same way
 let menu1 = addMenuItem("CC", "Chicken Chili", 7, true, false);
+menu1.prepare();
 
-let menu2 = addMenuItem("SO", "Soda", 1, false, true);
+/*let menu2 = addMenuItem("SO", "Soda", 1, false, true);
 
 console.log(menu1.price);
 console.log("price" in menu1); // boolean checking to see if the key exists, can use in an if condition
@@ -30,3 +34,15 @@ for(let key in menu1 ) {
 for (let code in countryCodes) {
     console.log("Dial " + code + " before calling your firend in " + countryCodes[code]);
 }
+*/
+
+let stateTax = {
+    stateAbbr: "GA",
+    stateName: "Georgia",
+    taxRate: 4,
+    calculateTax(amount) {
+        return amount * (this.taxRate/100);
+    }
+}
+
+console.log(stateTax.calculateTax(500));
