@@ -12,10 +12,17 @@ let menu = [
     ["SO", "Soda", 1]
 ];
 
-console.log(menu);
+/*console.log(menu);
 
 console.log(menuItems[2]);
 
 console.log(menu[2][1]);
 
-console.table(menu);
+console.table(menu);*/
+
+for(let rowCounter = 0; rowCounter < menu.length; rowCounter++) {
+    for(let colCounter = 0; colCounter<3;  colCounter++) {
+        console.log(menu[rowCounter][colCounter]);
+    }
+    
+}
