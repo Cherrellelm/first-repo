@@ -1,5 +1,5 @@
 .container {
-    background: lightblue;
+    background: rgb(239, 235, 227);
     padding: 16px;
     border: 1px solid black;
     gap: 8px;
@@ -11,7 +11,7 @@
 
 /* this selector selects all divs inside of .flex-container */
 .item {
-    background: lightblue;
+    background: rgb(239, 235, 227);
     border: 1px solid white;
     height: 48px;
     flex: 1;
@@ -19,7 +19,7 @@
 }
 
 .lineItem {
-    background: lightblue;
+    background: rgb(239, 235, 227);
 }
 
 .addButton {
