@@ -1,5 +1,5 @@
 .container {
-    background: rgb(239, 235, 227);
+    background: rgb(235, 235, 234);
     padding: 16px;
     border: 1px solid black;
     gap: 8px;
@@ -11,7 +11,7 @@
 
 /* this selector selects all divs inside of .flex-container */
 .item {
-    background: rgb(239, 235, 227);
+    background: rgb(235, 235, 234);
     border: 1px solid white;
     height: 48px;
     flex: 1;
@@ -19,7 +19,7 @@
 }
 
 .lineItem {
-    background: rgb(239, 235, 227);
+    background: rgb(235, 235, 234);
 }
 
 .addButton {
@@ -34,4 +34,11 @@
     margin-left:10px;
     display: flex;
     flex-direction: row;
+}
+
+.img {
+    width: 100vw;
+    height: 50vh;
+    align-items: center;
+    flex: 1;
 }
