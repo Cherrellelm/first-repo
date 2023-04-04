@@ -37,8 +37,6 @@
 }
 
 .img {
-    width: 100vw;
-    height: 50vh;
+    max-width: 100%;
     align-items: center;
-    flex: 1;
 }
