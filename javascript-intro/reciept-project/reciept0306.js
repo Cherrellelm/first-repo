@@ -2,7 +2,7 @@ let menuItems = [
   "Chicken Chili",
   "Jerk Tilapia",
   "Black Beans",
-  "Sweet Potato",
+  "Sweet Potatos",
   "Homemade Brownie",
   "Soda",
 ];
@@ -254,7 +254,7 @@ function totalBillCalc() {
   billTotal.value = bAmount.toFixed(2);
 }
 
-function junk() {
+/*function junk() {
   if (!document.getElementById("outputMessage")) {
     outputLine = document.createElement("p");
     outputLine.setAttribute("id", "outputMessage");
@@ -268,4 +268,4 @@ function junk() {
     totalBill;
 
   outputDiv.appendChild(outputLine);
-}
+}*/
