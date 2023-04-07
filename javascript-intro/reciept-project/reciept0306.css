@@ -54,3 +54,15 @@
     font-family: 'Heebo', sans-serif, serif;
     font-size: 18px;
 }
+
+.btnStyle {
+    background-color: #4a9e4d;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 8px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
