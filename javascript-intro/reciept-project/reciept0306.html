@@ -11,38 +11,21 @@
       <div class="img">
         <img src="./reciept.png" alt="Dinner Spread" />
       </div>
-      <div>
+      <div class="headFont">
         <h1>Online Menu</h1>
         <h3>Order Here:</h3>
       </div>
 
-      <div class="item">
+      <div class="item smallFont">
         <label for="statename">Location: </label>
         <select name="statename" id="statename"></select>
       </div>
-      <div class="item">
+      <div class="item smallFont">
         <button id="addOrderBtn">Add to Order</button>
         <button id="clearOrderBtn">Clear Order</button>
       </div>
-      <div class="item" id="orders">
-        <!--<div id="itemDiv0">
-          <label id="itemNumber0">1.</label>
-          <select id="itemDescription0">
-            <option value="" disabled selected hidden>Choose an item</option>
-            <option value="C">Chicken Chili</option>
-            <option value="J">Jerk Tilipia</option>
-            <option value="P">Potatoes</option>
-          </select>
-          <label id="itemPrice0"> $4.00</label>
-          <select id="itemQuantity0">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-          <label id="itemCost0"> $12.00</label>
-        </div>-->
-      </div>
-      <div class="item">
+      <div class="item smallFont" id="orders"></div>
+      <div class="item smallFont">
         <label for="orderTotal">Order Total</label>
         <input
           type="text"
@@ -52,7 +35,7 @@
           class="align-right"
         />
       </div>
-      <div class="item radioBtn" id="tipSelect">
+      <div class="item radioBtn smallFont" id="tipSelect">
         <input type="radio" id="tipSelect25" name="tip" value="25" checked />
         <label for="25">25%</label><br />
         <input type="radio" id="tipSelect20" name="tip" value="20" />
@@ -61,7 +44,7 @@
         <label for="15">15%</label><br />
       </div>
 
-      <div class="item">
+      <div class="item smallFont">
         <label for="tipTotal">Tip Total</label>
         <input
           type="text"
@@ -72,7 +55,7 @@
         />
       </div>
 
-      <div class="item">
+      <div class="item smallFont">
         <label id="labelStateTax" for="stateTax"></label>
         <input
           type="text"
@@ -83,7 +66,7 @@
         />
       </div>
 
-      <div class="item">
+      <div class="item smallFont">
         <label for="billTotal">Total Bill</label>
         <input
           type="text"
@@ -94,11 +77,11 @@
         />
       </div>
 
-      <div class="item">
+      <div class="item smallFont">
         <button id="submitBtn">Submit</button>
       </div>
 
-      <div id="output" class="item"></div>
+      <div id="output" class="item smallFont"></div>
     </div>
   </body>
 </html>
